@@ -1,0 +1,257 @@
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 600;
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+}
+
+.ui-overlay {
+    position: fixed;
+    top: 8%;
+    left: 10px;
+    height: 80vh;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.circle.active {
+    border: 2px solid white;
+}
+
+.red {
+    background-color: #c70039;
+}
+
+.blue {
+    background-color: #12486b;
+}
+
+.green {
+    background-color: #618264;
+}
+
+.yellow {
+    background-color: #f4e869;
+}
+
+.organge {
+    background-color: #e55604;
+}
+
+.white {
+    background-color: #FFFFFF;
+}
+
+.ui-overlay-2 {
+    position: fixed;
+    height: 80vh;
+    top: 8%;
+    right: 10px;
+    padding: 10px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slider-container {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    margin-top: 30%;
+    align-items: center;
+}
+
+/* Style for "Next" button */
+.circle-next {
+    background-color: rgb(255, 255, 255);
+    /* Choose your desired color */
+}
+
+/* Style for vertical slider */
+.vertical-slider {
+    width: 20px;
+    height: 80%;
+    orientation: vertical;
+    transform: rotate(180deg);
+    -webkit-appearance: slider-vertical;
+    appearance: slider-vertical;
+    -moz-appearance: slider-vertical;
+}
+
+/* Style for "Export" button */
+.circle-export {
+    background-color: rgb(255, 255, 255);
+    /* Choose your desired color */
+}
+
+.button-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    /* Text color */
+    background-color: rgba(128, 128, 128, 0.5);
+    /* Gray background color with transparency */
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    width: 7.5rem;
+    /* Padding for the button */
+    border-radius: 10px;
+    /* Rounded corners */
+    transition: background-color 0.3s ease;
+    /* Smooth background color transition */
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
+.button-label:hover, .file-upload-button:hover {
+    background-color: rgba(128, 128, 128, 0.7);
+    /* Darker gray background color on hover */
+}
+
+/* Style for color names and slider value */
+.color-name {
+    margin-top: 5px;
+    font-size: 14px;
+    color: white;
+    /* Text color */
+    text-align: center;
+}
+
+.slider-value {
+    margin-top: 5px;
+    font-size: 14px;
+    color: white;
+    /* Text color */
+}
+
+.upload-overlay {
+    position: fixed;
+    top: 50%;
+    left: 42%;
+    z-index: 1;
+}
+
+button {
+    border-radius: 8px;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 600;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    transition: border-color 0.25s;
+}
+
+/* Style the label to look like a button */
+.file-upload-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgba(128, 128, 128, 0.5);
+    /* Change to your desired button color */
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
+button:hover {
+    border-color: #646cff;
+}
+
+button:focus, button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media screen and (max-width: 600px) {
+    canvas {
+        margin: 0;
+        padding: 0;
+        top: 0;
+        height: 110vh !important;
+        transform: translateY(-30px);
+    }
+
+    .ui-overlay {
+        height: 65vh;
+    }
+
+    .circle {
+        width: 20px;
+        height: 20px;
+    }
+
+    .button-label, .file-upload-button {
+        padding: 7px 10px;
+        width: 100px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        margin-bottom: 0;
+    }
+
+    .ui-overlay-2 {
+        flex-direction: row;
+        top: 85%;
+        align-items: center;
+        height: 10vh;
+        width: 90%;
+        padding: 5px;
+        right: 4%;
+        flex-wrap: wrap;
+    }
+
+    .slider-container {
+        margin-top: 0;
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+        justify-content: space-around;
+        height: 40px;
+    }
+
+    .vertical-slider {
+        transform: rotate(90deg);
+        padding: 0;
+        margin-left: 4rem;
+        height: 200px;
+    }
+}

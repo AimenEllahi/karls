@@ -1,0 +1,123 @@
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title>three-mesh-bvh - Geometry Sculpting</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+
+    <style type="text/css">
+      html,
+      body {
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+      }
+
+      canvas {
+        width: 100%;
+        height: 100%;
+      }
+
+      #info {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        color: white;
+        font-family: monospace;
+        text-align: center;
+        padding: 5px 0;
+      }
+
+      a {
+        color: #eee;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="info">
+      Inspired by <a href="https://github.com/stephomi/sculptgl">SculptGL</a>.
+      <br />
+      <br />
+      Matcap textures from
+      <a href="https://github.com/nidorx/matcaps/">nidorx/matcaps repo</a>.
+    </div>
+    <script type="module" src="./sculpt.js"></script>
+  </body>
+</html> -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>three-mesh-bvh - Geometry Collect Triangles</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+        <link rel="stylesheet" href="./style.css"/>
+        <script type="importmap">
+            {
+                "imports": {
+                    "three": "https://threejs.org/build/three.module.js",
+                    "three/addons/": "https://threejs.org/examples/jsm/"
+                }
+            }</script>
+    </head>
+    <body>
+        <div>
+            <div class="ui-overlay">
+                <!-- Circular divs with different colors -->
+                <div>
+                    <div class="circle red" data-color="red"></div>
+                    <div class="color-name">Red</div>
+                </div>
+                <div>
+                    <div class="circle blue" data-color="blue"></div>
+                    <div class="color-name">Blue</div>
+                </div>
+                <div>
+                    <div class="circle green" data-color="green"></div>
+                    <div class="color-name">Green</div>
+                </div>
+                <div>
+                    <div class="circle yellow" data-color="yellow"></div>
+                    <div class="color-name">Yellow</div>
+                </div>
+                <div>
+                    <div class="circle organge" data-color="orange"></div>
+                    <div class="color-name">Orange</div>
+                </div>
+                <div>
+                    <div class="circle white" data-color="white"></div>
+                    <div class="color-name">White</div>
+                </div>
+            </div>
+            <div class="ui-overlay-2">
+                <div>
+                    <input type="file" id="modelUpload" accept=".obj, .stl" class="file-upload" style="display: none"/>
+                    <label for="modelUpload" class="file-upload-button">Upload File</label>
+                </div>
+                <div>
+                    <button class="button-label sculpt-toggle">Sculpting</button>
+                </div>
+                <button class="button-label reset">Reset</button>
+                <button class="button-label export">Export</button>
+                <div class="slider-container">
+                    <input type="range" orient="vertical" class="vertical-slider" min="10" value="10" max="100" step="1"/>
+                    <div class="slider-value">10</div>
+                </div>
+            
+<select name="matcap" id="matcapdropdown">
+</select>
+                
+<select name="sculpt tool" id="tooldropdown">
+  <option value="clay">Clay</option>
+  <option value="normal">Normal</option>
+  <option value="flatten">Flatter</option>
+</select>
+                
+            </div>
+
+        </div>
+        
+        <!-- <button class="export">Export</button> -->
+        <script type="module" src="./collectTriangles.js"></script>
+    </body>
+</html>
