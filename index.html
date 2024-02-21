@@ -136,8 +136,15 @@
     <script type="module" src="./collectTriangles.js"></script>
     <script>
       document.querySelector(".sculpt-toggle").addEventListener("click", () => {
-        document.querySelector(".brush-selector").style.display = "block";
-        document.querySelector(".color-selector").style.display = "none";
+        if (
+          document.querySelector(".sculpt-toggle").textContent === "Sculpting"
+        ) {
+          document.querySelector(".brush-selector").style.display = "block";
+          document.querySelector(".color-selector").style.display = "none";
+        } else {
+          document.querySelector(".brush-selector").style.display = "none";
+          document.querySelector(".color-selector").style.display = "block";
+        }
       });
     </script>
   </body>
