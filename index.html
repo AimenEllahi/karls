@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <title>three-mesh-bvh - Geometry Collect Triangles</title>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="./style.css" />
     <script type="importmap">
       {
@@ -16,31 +14,20 @@
       }
     </script>
   </head>
+
   <body>
     <div>
       <div class="ui-overlay">
         <!-- Add images for brush selection -->
-        <div
-          class="brush-selector sculpt tool"
-          id="tooldropdown"
-          style="display: none"
-        >
+        <div class="brush-selector sculpt tool hide" id="tooldropdown">
           <div>
-            <img src="/clay_trans.png" alt="Brush 1" style="cursor: pointer" />
+            <img src="./public/clay_trans.png" alt="Brush 1" style="cursor: pointer" />
           </div>
           <div>
-            <img
-              src="/flatten_trans.png"
-              alt="Brush 2"
-              style="cursor: pointer"
-            />
+            <img src="./public/flatten_trans.png" alt="Brush 2" style="cursor: pointer" />
           </div>
           <div>
-            <img
-              src="/normal_trans.png"
-              alt="Brush 2"
-              style="cursor: pointer"
-            />
+            <img src="./public/normal_trans.png" alt="Brush 2" style="cursor: pointer" />
           </div>
 
           <!-- Add more brushes as necessary -->
@@ -75,16 +62,8 @@
       </div>
       <div class="ui-overlay-2">
         <div>
-          <input
-            type="file"
-            id="modelUpload"
-            accept=".obj, .stl"
-            class="file-upload"
-            style="display: none"
-          />
-          <label for="modelUpload" class="file-upload-button"
-            >Upload File</label
-          >
+          <input type="file" id="modelUpload" accept=".obj, .stl" class="file-upload" style="display: none" />
+          <label for="modelUpload" class="file-upload-button">Upload File</label>
         </div>
         <div>
           <button class="button-label sculpt-toggle">Sculpting</button>
@@ -92,32 +71,18 @@
         <button class="button-label reset">Reset</button>
         <button class="button-label export">Export</button>
         <div class="slider-group">
-          <span>Radius</span>
           <div class="slider-container">
-            <input
-              type="range"
-              orient="vertical"
-              class="vertical-slider"
-              min="10"
-              value="10"
-              max="100"
-              step="1"
-            />
-            <div class="slider-value">10</div>
+            <span>Rad</span>
+
+            <input type="range" orient="vertical" class="vertical-slider" min="10" value="10" max="100" step="1" />
+            <div class="slider-value">0</div>
           </div>
           <div class="slider-container">
-            <input
-              type="range"
-              orient="vertical"
-              class="vertical-slider vertical-slider-intensity"
-              min="0.1"
-              value="0.1"
-              max="1"
-              step="0.1"
-            />
-            <div class="slider-value slider-value-intensity">0.1</div>
+            <span>Int</span>
+            <input type="range" orient="vertical" class="vertical-slider vertical-slider-intensity" min="1" value="10"
+              max="100" step="1" />
+            <div class="slider-value slider-value-intensity">10</div>
           </div>
-          <span>Intensity</span>
         </div>
 
         <!-- <select name="sculpt tool" id="tooldropdown">
@@ -130,7 +95,7 @@
 
     <!-- <button class="export">Export</button> -->
     <script type="module" src="./collectTriangles.js"></script>
-    <script>
+    <!-- <script>
       document.querySelector(".sculpt-toggle").addEventListener("click", () => {
         if (
           document.querySelector(".sculpt-toggle").textContent === "Sculpting"
@@ -142,6 +107,7 @@
           document.querySelector(".color-selector").style.display = "block";
         }
       });
-    </script>
+    </script> -->
   </body>
+
 </html>

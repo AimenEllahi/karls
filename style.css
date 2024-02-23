@@ -212,8 +212,14 @@ button:focus-visible {
 .slider-group {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  width: 100%;
+
+}
+
+.hide {
+  display: none;
 }
 
 @media screen and (max-width: 600px) {

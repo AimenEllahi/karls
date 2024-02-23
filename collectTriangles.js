@@ -140,7 +140,7 @@ intensitySlider.addEventListener("input", function () {
   // Get the current value of the slider and update the displayed value
   const value = intensitySlider.value;
   intensityValue.textContent = value;
-  params.intensity = intensityValue.textContent;
+  params.intensity = value * 0.05;
 });
 
 // Add an event listener for color circle clicks
@@ -152,14 +152,22 @@ document.querySelectorAll(".circle").forEach(function (circle) {
 });
 
 const sculptToggleBtn = document.querySelector(".sculpt-toggle");
+const colorSelector = document.querySelector(".color-selector");
+const brushSelector = document.querySelector(".brush-selector");
 sculptToggleBtn.addEventListener("click", function () {
   sculptToggle = !sculptToggle;
   if (sculptToggle) {
     sculptToggleBtn.textContent = "Painting";
     brush.visible = true;
+    //remove class
+    colorSelector.classList.add("hide");
+    brushSelector.classList.remove("hide");
   } else {
     sculptToggleBtn.textContent = "Scultpting";
     brush.visible = false;
+    //remove class
+    colorSelector.classList.remove("hide");
+    brushSelector.classList.add("hide");
   }
 });
 
