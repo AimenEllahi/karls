@@ -54,7 +54,7 @@ const params = {
   matcap: "Clay",
   size: 10,
   brush: "clay",
-  intensity: 1,
+  intensity: 0.1,
   maxSteps: 10,
   invert: false,
   symmetrical: false,
