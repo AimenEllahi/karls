@@ -299,7 +299,7 @@ function loadModelUrl(fileName, url = fileName) {
         bvhHelper.update();
       },
       (xhr) => {
-        // This callback will be called while the model is being loaded, providing progress information
+        // This callback will be called while the model isroviding progress information
         console.log("Loading model...", (xhr.loaded / xhr.total) * 100 + "%");
       },
       (error) => {
