@@ -33,10 +33,25 @@ canvas {
   left: 10px;
   height: 80vh;
   z-index: 1;
+
   padding: 10px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+}
+
+.ui-overlay-2 {
+  position: fixed;
+  height: 80vh;
+  top: 8%;
+  right: 10px;
+  padding: 10px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
   justify-content: space-around;
+  align-items: center;
+
 }
 
 .circle {
@@ -79,21 +94,10 @@ canvas {
   background-color: #ffffff;
 }
 
-.ui-overlay-2 {
-  position: fixed;
-  height: 80vh;
-  top: 8%;
-  right: 10px;
-  padding: 10px;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
+
 
 .slider-container {
-  height: 300px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   flex: 2;
@@ -105,6 +109,15 @@ canvas {
 .circle-next {
   background-color: rgb(255, 255, 255);
   /* Choose your desired color */
+}
+
+.color-selector {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+
 }
 
 /* Style for vertical slider */
@@ -206,6 +219,16 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.brush-selector {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+
+
+}
+
 .brush-selector img {
   width: 50px;
   height: 50px;
@@ -213,6 +236,7 @@ button:focus-visible {
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 
 .slider-group {
@@ -221,6 +245,8 @@ button:focus-visible {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  height: 50%;
+
 }
 
 .hide {
@@ -277,6 +303,7 @@ button:focus-visible {
     height: 100%;
     flex-direction: column;
     justify-content: space-between;
+
   }
 
   .slider-container {
@@ -284,14 +311,17 @@ button:focus-visible {
     flex-direction: row;
     align-items: center;
     padding: 0;
-    justify-content: space-around;
+    justify-content: space-between;
     height: 40px;
+    width: 90%;
+
   }
 
   .vertical-slider {
     transform: rotate(90deg);
     padding: 0;
-    margin-left: 4rem;
+
     height: 200px;
+
   }
 }
