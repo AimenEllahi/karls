@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <title>three-mesh-bvh - Geometry Collect Triangles</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
     <link rel="stylesheet" href="./style.css" />
     <script type="importmap">
       {
@@ -21,13 +23,28 @@
         <!-- Add images for brush selection -->
         <div class="brush-selector sculpt tool hide" id="tooldropdown">
           <div>
-            <img src="./public/clay_trans.png" alt="Brush 1" style="cursor: pointer" />
+            <img
+              src="./public/clay_trans.png"
+              alt="Brush 1"
+              style="cursor: pointer"
+            />
+            <div class="color-name">Clay</div>
           </div>
           <div>
-            <img src="./public/flatten_trans.png" alt="Brush 2" style="cursor: pointer" />
+            <img
+              src="./public/flatten_trans.png"
+              alt="Brush 2"
+              style="cursor: pointer"
+            />
+            <div class="color-name">Flatten</div>
           </div>
           <div>
-            <img src="./public/normal_trans.png" alt="Brush 2" style="cursor: pointer" />
+            <img
+              src="./public/normal_trans.png"
+              alt="Brush 2"
+              style="cursor: pointer"
+            />
+            <div class="color-name">Normal</div>
           </div>
 
           <!-- Add more brushes as necessary -->
@@ -62,8 +79,16 @@
       </div>
       <div class="ui-overlay-2">
         <div>
-          <input type="file" id="modelUpload" accept=".obj, .stl" class="file-upload" style="display: none" />
-          <label for="modelUpload" class="file-upload-button">Upload File</label>
+          <input
+            type="file"
+            id="modelUpload"
+            accept=".obj, .stl"
+            class="file-upload"
+            style="display: none"
+          />
+          <label for="modelUpload" class="file-upload-button"
+            >Upload File</label
+          >
         </div>
         <div>
           <button class="button-label sculpt-toggle">Sculpting</button>
@@ -74,13 +99,28 @@
           <div class="slider-container">
             <span>Rad</span>
 
-            <input type="range" orient="vertical" class="vertical-slider" min="10" value="10" max="100" step="1" />
+            <input
+              type="range"
+              orient="vertical"
+              class="vertical-slider"
+              min="10"
+              value="10"
+              max="100"
+              step="1"
+            />
             <div class="slider-value">0</div>
           </div>
           <div class="slider-container">
             <span>Int</span>
-            <input type="range" orient="vertical" class="vertical-slider vertical-slider-intensity" min="1" value="10"
-              max="100" step="1" />
+            <input
+              type="range"
+              orient="vertical"
+              class="vertical-slider vertical-slider-intensity"
+              min="1"
+              value="10"
+              max="100"
+              step="1"
+            />
             <div class="slider-value slider-value-intensity">10</div>
           </div>
         </div>
@@ -109,5 +149,4 @@
       });
     </script> -->
   </body>
-
 </html>
